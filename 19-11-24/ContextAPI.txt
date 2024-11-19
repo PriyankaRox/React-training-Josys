@@ -1,0 +1,54 @@
+The Context API in React is a way to manage and share state or data across components without passing props manually through every level of the component tree. Here's how it works in class components:
+
+1. Define Context
+Use createContext to create a context with a default value.
+const AppContext = React.createContext<ContextType | undefined>(undefined);
+
+2. Provider
+The Provider component supplies the context value to its descendants.
+Implement the Provider in a class component:
+class AppProvider extends React.Component {
+  state = { user: "John", isLoggedIn: false };
+
+  toggleLogin = () => {
+    this.setState({ isLoggedIn: !this.state.isLoggedIn });
+  };
+
+  render() {
+    return (
+      <AppContext.Provider value={{ ...this.state, toggleLogin: this.toggleLogin }}>
+        {this.props.children}
+      </AppContext.Provider>
+    );
+  }
+}
+
+
+3. Consumer
+Use static contextType to consume the context in class components.
+class Dashboard extends React.Component {
+  static contextType = AppContext;
+
+  render() {
+    const { user, isLoggedIn, toggleLogin } = this.context!;
+    return (
+      <div>
+        <p>{isLoggedIn ? `Welcome, ${user}` : "Please log in"}</p>
+        <button onClick={toggleLogin}>Toggle Login</button>
+      </div>
+    );
+  }
+}
+
+4. Wrapping Components
+Wrap components with the Provider to make context available:
+<AppProvider>
+  <Dashboard />
+</AppProvider>
+
+Advantages:
+Avoids prop drilling.
+Centralized state management for deeply nested components.
+TypeScript Tips:
+Define context value type (ContextType) for type safety.
+Use this.context! to handle null-safety in TypeScript.

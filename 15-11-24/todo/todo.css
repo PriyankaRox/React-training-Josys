@@ -1,0 +1,17 @@
+.todo {
+  margin: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+button {
+  background-color: green;
+  color: white;
+  margin: 3px;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
