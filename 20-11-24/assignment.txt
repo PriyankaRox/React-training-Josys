@@ -1,0 +1,35 @@
+1.  Recreate the AuthProvider example using Functional components.
+
+2.  Create BankApp Component that uses reducer concept to perform operations on balance amount. 
+		a.  Required Operations :   deposit,  withdraw
+		b.  Read the data from user while preform the above operations 
+		c.  You may choose either functional or class components to implements 
+		
+3.   What is React.Query?   How to manage the state using React.Query?  Try to prepare a basic example to demonstrate usage of React.Query?
+
+4. What is JSON Server?  How to get the data from JSON Server  in  React?
+
+		https://www.npmjs.com/package/json-server/v/0.17.4
+		
+	Note:  Latest version still under testing mode.  Please install the above version to develop the application. 
+	
+
+[Optional Assignments]
+
+5.  Create react component to implement the following requirements:  (Check the Reference Image)
+ 	
+		a.  Prepare array of objects with cart information
+				  cartArray:CartItem[] =    [
+						{ProductId :  1025,  ProductName :  "Printer",  UnitPrice :  2560, Total :  0},
+						{ProductId :  1025,  ProductName :  "Printer",  UnitPrice :  2560, Total :  0},
+						{ProductId :  1025,  ProductName :  "Printer",  UnitPrice :  2560, Total :  0},
+				  ];
+		
+		b.  Properties:   ProductId,  ProductName, Unit Price, Quantity, Total
+		c.  Total and Grand Total should calculate at runtime	 
+		d.  Remove from cart  should remove from the cart
+		
+		Note:  S.No. is not the product id
+		
+
+ 6.  Update the above example add extra feature add new item to cart.  Also try to perform add/remove using reducer concept. 

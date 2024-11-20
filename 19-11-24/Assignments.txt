@@ -1,0 +1,15 @@
+1.  Recreate the Context API example(that we discussed in the session) using Class components in React with TypeScript?
+	 -->  Prepare short notes on context api in class components. 
+	 
+2.  Implement the following requirement using HOC concept:
+			a.  Create a HOC that takes url, dataProperties as properties
+			b.  HOC should generate the grid (table format)  with the data return by the url.
+			c.   dataProperties  help us to iterate the columns in table 
+			d.   HOC returns the component that display data. 
+			
+			gridHoc ---  urls:string,  dataProperties: string[]
+			
+			
+3.   Create custom hook to perform the operations on localStorage. Custom hook returns the object that should helps us to perform operations like add, remove, get operations through custom hook.     (Hook Name :  useStorage)
+
+4.  Study the component life-cycle methods of class components in React 

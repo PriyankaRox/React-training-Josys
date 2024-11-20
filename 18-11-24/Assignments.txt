@@ -1,0 +1,17 @@
+Assignments
+~~~~~~~~~~
+
+1.  What is useMemo() hook? Study more details with example?
+
+2.  Create a react component to display customer details with below url: 
+
+		https://www.w3schools.com/angular/customers.php
+		
+		a.  In page load it should display all customers
+		b.  Provide drop-down that shows Country names
+		c.  Data should update if the user change the country
+		
+3.  Create a react component to apply fading effect to heading tag using useLayoutEffect()  hook.   
+
+
+4.  What is useCallback() hook? Study more details with example?
