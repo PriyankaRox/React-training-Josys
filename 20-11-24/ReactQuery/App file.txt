@@ -1,0 +1,12 @@
+import { QueryClient, QueryClientProvider } from "react-query";
+import ReactQuery from "./20-11-24/Assignment/ReactQuery";
+
+const queryClient = new QueryClient();
+
+const AppQuery: React.FC = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <ReactQuery />
+    </QueryClientProvider>
+  );
+};
