@@ -1,0 +1,29 @@
+1.  Create a component to perform CRUD operations on customers data
+
+		a.  customer details :   CustomerId,  Name,  City, ContactNumber, Year, Photo, TotalPurchasesPerYear 
+		b.  TotalPurchasesPerYear -- it means total amount he spend to but the products in our store
+		c.   For time being,  Photo -- give some online urls 
+		d.  Try to add validations while perform create operations. 
+		
+
+2.   Create a component  that will display top 5 purchasers  details in card format includes their name, city and photo. 
+
+3.    Create a component to display the  customers based on the selected city
+
+			a.  Display city names in drop-down list 
+			b.  All cities also should be available 
+			c.  Show the details based on the selected city 
+			d. Sort the data based on the city 
+			
+			
+ [optional]
+4.   Create login and registration components.
+
+			a.  User json -server to perform these operations
+			b.  Create json file with users data
+			c.   Create separate components for login and registration
+			d.   Try to add validations while doing registration
+			
+	 
+
+Hint :  In the above all examples, Use JSON Server as back-end,  create required no. of services in react to implement ajax calls.
