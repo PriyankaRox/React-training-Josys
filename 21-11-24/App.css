@@ -1,0 +1,128 @@
+.App {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  height: 100vh; /* Full viewport height */
+}
+
+.App-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: calc(10px + 2vmin);
+}
+
+.title {
+  padding: 10px 50px;
+}
+
+.logout {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  width: 70px;
+  margin: 0px 20px;
+}
+
+.logout:hover {
+  background-color: #e60000;
+}
+
+.main {
+  display: flex; /* Sidebar and content align horizontally */
+  flex: 1; /* Main section takes the remaining space */
+  height: calc(100vh - 0px);
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 230px;
+  background-color: #282c34;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  overflow-y: auto; /* Scrollable if content overflows */
+  border-right: 1px solid #ddd;
+}
+
+.sidebar .submenu-icon {
+  color: inherit;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #282c34;
+}
+
+.sidebar .submenu-icon:hover {
+  color: #61dafb;
+}
+
+.sidebar .css-18unl23 {
+  background-color: #282c34; /* Match the sidebar background */
+  color: white; /* Icon color */
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Ensure links take full width */
+  padding: 10px;
+}
+
+.sidebar a:hover {
+  color: #007bff;
+}
+
+.content {
+  flex: 1; /* Take the remaining width */
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* login */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #831d1d;
+  padding: 20px;
+}
+
+.auth-card {
+  background-color: #dfc3c3;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  /* max-width: 400px; */
+  text-align: center;
+}
+
+.auth-footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+  font-weight: 600;
+}
+
+.register-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.register-btn:hover {
+  color: #d1e5fa;
+}
