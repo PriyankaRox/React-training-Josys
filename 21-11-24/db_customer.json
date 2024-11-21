@@ -1,0 +1,47 @@
+{
+  "customers": [
+    {
+      "customerId": 101,
+      "name": "Jhon",
+      "city": "Kolar",
+      "contactNumber": "9890987654",
+      "year": 2003,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwHvEGamFasFcudDxAlTzNzd2ZsSRKsmf4Uw&s",
+      "totalPurchasesPerYear": 20900
+    },
+    {
+      "customerId": 102,
+      "name": "Alice",
+      "city": "Chennai",
+      "contactNumber": "9890987654",
+      "year": 2023,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwHvEGamFasFcudDxAlTzNzd2ZsSRKsmf4Uw&s",
+      "totalPurchasesPerYear": 20000
+    },
+    {
+      "customerId": 103,
+      "name": "Janis",
+      "city": "Karnataka",
+      "contactNumber": "9098987654",
+      "year": 2022,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxctjU21pUENIsGN1F4qY21P7GfdEbhTMp2g&s",
+      "totalPurchasesPerYear": 93000
+    },
+    {
+      "customerId": 104,
+      "name": "Reene",
+      "city": "Kerala",
+      "contactNumber": "9098087654",
+      "year": 2021,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsNWPhXbh68-pBV7iNSR76TAgOVQRSqkuogA&s",
+      "totalPurchasesPerYear": 43000
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "Priyanka",
+      "password": "password123"
+    }
+  ]
+}
