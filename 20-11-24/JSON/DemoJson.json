@@ -1,0 +1,23 @@
+
+{
+    "posts": [
+      { "id": 1, "title": "JSON Server", "author": "User" },
+      { "id": 2, "title": "Learning React", "author": "Dev" }
+    ]
+  }
+
+
+
+
+
+
+
+// JSON Server is a lightweight and easy-to-use mock REST API that allows developers to create and manage a fake API for prototyping or development purposes. It runs locally and serves data from a JSON file, making it an excellent tool for simulating back-end functionality in front-end development.
+
+// Key Features:
+
+// Provides a RESTful API with minimal setup.
+// Supports HTTP methods like GET, POST, PUT, DELETE, and PATCH.
+// Useful for prototyping and testing applications without needing a real back-end.
+// Allows custom routes and middleware.
+
