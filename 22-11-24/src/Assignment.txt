@@ -1,0 +1,11 @@
+1.   How to implement nested routes in React Application?  Demonstrate with example.  Plz refer the image to get an idea. 
+
+2.  How to implement authorization i.e implement role based security in react application?
+	Eg:  			
+			Emp route should access only for Admin user 
+			Dept  route should access to any authentication user 			
+
+3.  Add lazy loading feature in routing . 
+
+[Optional]
+4. Implement the paging concept in react application.  Use json-server options to get limited no. of records from the server. 
