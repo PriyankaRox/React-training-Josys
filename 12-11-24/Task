@@ -1,0 +1,48 @@
+Task 2: 12 November 2024
+Build a Simple Library Management System using JavaScript OOP Concepts
+
+Objective:
+Create a simple library management system that tracks books and users, demonstrating your understanding of object creation, constructor properties, prototype inheritance,
+and prototype chaining. You will create a system that manages books, tracks users, and allows users to borrow and return books.
+
+Task Details:
+1. Library Object (Object Literals):
+    • Create a Library object using object literals.
+    • The library should:
+       • Store an array of books.
+       • Have methods to add books to the library.
+       • Have a method to list all available (not borrowed) books.
+
+2. Book Object (Factory Functions):
+    • Create a Book object using a factory function.
+    • Each book should have:
+      • A title and author as properties.
+      • A boolean property isBorrowed to track whether the book is borrowed or available.
+
+3. User Object (Constructor Functions and Prototypes):
+    • Create a User object using a constructor function.
+    • The user should have:
+       • A name and an array borrowedBooks to track which books the user has borrowed.
+    • Add a method borrowBook to the prototype of the User that allows users to borrow a book if it's available.
+    • Add a method returnBook to the prototype of the User to return a borrowed book.
+
+4. Prototypal Inheritance (LibraryMember):
+    • Create a LibraryMember object that inherits from User using prototypal inheritance.
+    • The LibraryMember should have an additional membershipId property to track membership.
+    • Add a method getMembershipInfo to LibraryMember to display the member's name and membership ID.
+    • Ensure that LibraryMember can use the methods borrowBook and returnBook inherited from User.
+
+5. Prototype Chaining:
+    • Demonstrate prototype chaining by ensuring that LibraryMember instances can access methods defined in both LibraryMember and User prototypes.
+
+Requirements:
+1. Use object literals, factory functions, and constructor functions where specified.
+2. Implement methods for borrowing and returning books using prototypes.
+3. Ensure prototypal inheritance and prototype chaining work correctly, where LibraryMember can access methods from both its own prototype and the User prototype.
+
+Testing Criteria:
+• Add several books to the Library object.
+• Create both User and LibraryMember objects.
+• Borrow and return books using these objects.
+• Check that books are correctly marked as borrowed or available.
+• Verify that LibraryMember can access both User methods and its own methods.

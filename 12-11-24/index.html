@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knowledge Hub</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img
+          src="./world-book-day.png"
+          alt="world-book-day"
+          width="50px"
+          height="50px"
+        />
+        <h1>Knowledge Hub</h1>
+      </header>
+
+      <main>
+        <div id="library-section">
+          <div class="add-book" id="add-book-section">
+            <h2>Add New Book to Library</h2>
+            <input type="text" id="new-book-title" placeholder="Book Title" />
+            <input type="text" id="new-book-author" placeholder="Book Author" />
+            <button class="add-book-btn" id="add-book-button">Add Book</button>
+          </div>
+          <hr />
+          <h2>Available Books</h2>
+          <ul id="book-list"></ul>
+          <hr />
+        </div>
+        <div id="user-section">
+          <h2>Create User</h2>
+          <input type="text" id="user-name" placeholder="Enter your name" />
+          <input
+            type="text"
+            id="membership-id"
+            placeholder="Membership ID (optional)"
+          />
+          <button class="btn" onclick="createUser()">Create User</button>
+          <hr />
+          <h2>User Details</h2>
+          <div id="user-details"></div>
+        </div>
+
+        <div id="user-section">
+          <h2>Select User</h2>
+          <select id="user-dropdown">
+            <option value="" selected disabled hidden>Choose here</option>
+          </select>
+
+          <div id="user-actions">
+            <h3>Borrow a Book</h3>
+            <select id="available-books-dropdown">
+              <option value="" selected disabled hidden>Choose here</option>
+            </select>
+            <button class="btn" onclick="borrowBook()">
+              Borrow Selected Book
+            </button>
+            <hr />
+            <h3>Return a Book</h3>
+            <select id="borrowed-books-dropdown">
+              <option value="" selected disabled hidden>Choose here</option>
+            </select>
+            <button class="btn" onclick="returnBook()">
+              Return Selected Book
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; 2024 Knowledge Hub</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
