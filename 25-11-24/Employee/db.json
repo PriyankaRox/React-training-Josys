@@ -1,0 +1,8 @@
+{
+    "employees": [
+      { "id": 1, "name": "Max Doe", "position": "Developer" },
+      { "id": 2, "name": "Silly Smith", "position": "Designer" },
+      { "id": 3, "name": "Zac3 Smith", "position": "Tester" }
+    ]
+  }
+  
