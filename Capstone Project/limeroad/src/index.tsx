@@ -1,15 +1,49 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+
+import React, {
+  lazy,
+  Suspense,
+} from 'react';
+
+import ReactDOM from 'react-dom/client';
+import {
+  BrowserRouter as Router,
+  Link,
+  Route,
+  Routes,
+} from 'react-router-dom';
+
+import Loader from './pages/Loader/Loader';
 import reportWebVitals from './reportWebVitals';
 
+const App = lazy(() => import("./App"));
+const Login = lazy(() => import("./pages/Login/Login"));
+
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <nav>
+        <Link to="/login"></Link>
+        <Link to="/"></Link>
+      </nav>
+
+      <Suspense
+        fallback={
+          <div>
+            <Loader />
+          </div>
+        }
+      >
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<App />} />
+        </Routes>
+      </Suspense>
+    </Router>
   </React.StrictMode>
 );
 
