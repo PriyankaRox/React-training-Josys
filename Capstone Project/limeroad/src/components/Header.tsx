@@ -1,12 +1,28 @@
-import React, { useState } from "react";
+import React, {
+  useEffect,
+  useState,
+} from 'react';
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleMouseEnter = () => setIsOpen(true);
   const handleMouseLeave = () => setIsOpen(false);
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    if (user) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    localStorage.removeItem("user");
+  };
   return (
     <header className="flex items-center justify-between px-8 py-4 bg-white shadow-md">
       {/* Logo */}
@@ -34,6 +50,9 @@ const Header: React.FC = () => {
         <a href="/vmart" className="text-red-500 hover:text-red-700">
           VMART
         </a>
+        <a href="/product/crud" className="hover:text-black">
+          Admin
+        </a>
       </nav>
 
       {/* Action Icons */}
@@ -55,84 +74,84 @@ const Header: React.FC = () => {
 
         {/* Profile Icon */}
 
-        <div
-          className="relative"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
+        <div className="relative group">
           {/* Profile Icon and Label */}
           <div className="flex items-center space-x-1 cursor-pointer">
-            <span className="material-icons">account_circle</span>
+            <span className="material-icons text-gray-700">account_circle</span>
             <span className="text-sm font-medium text-gray-700">PROFILE</span>
           </div>
 
           {/* Dropdown Menu */}
-          {isOpen && (
-            <div className="absolute right-0 mt-2 w-56 bg-white border border-gray-200 rounded-md shadow-lg z-10">
-              <div className="p-4 text-gray-700">
-                <p className="font-medium">Welcome!</p>
-                <p className="text-sm">To view account details</p>
-              </div>
-              <div className="border-t border-gray-200">
-                <ul className="py-2">
-                  <li>
-                    <Link
-                      to="/login"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      Login
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/orders"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      Orders
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/return-replacement"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      Return Replacement
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/lr-credits"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      LR Credits
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/customer-support"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      Customer Support
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/faq-help"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      FAQ & Help
-                    </Link>
-                  </li>
-                </ul>
-                <div className="flex items-center justify-between px-4 py-2 border-t border-gray-200">
-                  <span className="text-sm text-gray-700">हिन्दी</span>
-                  <button className="px-4 py-1 text-sm font-medium text-white bg-blue-500 rounded hover:bg-blue-600">
-                    Change
-                  </button>
-                </div>
+          <div className="absolute right-0 mt-2 w-56 bg-white border border-gray-200 rounded-md shadow-lg z-10 hidden group-hover:block">
+            <div className="p-4 text-gray-700">
+              <p className="font-medium">Welcome!</p>
+              <p className="text-sm">To view account details</p>
+            </div>
+            <div className="border-t border-gray-200">
+              <ul className="py-2">
+                <li>
+                  <Link
+                    to="/login"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Login
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/orders"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Orders
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/return-replacement"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Return Replacement
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/lr-credits"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    LR Credits
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/customer-support"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Customer Support
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/faq-help"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    FAQ & Help
+                  </Link>
+                </li>
+              </ul>
+              <button
+                onClick={() => handleLogout} // Replace with your logout logic
+                className="w-full bg-red-500 px-4 py-2 text-white text-sm rounded hover:bg-red-600"
+              >
+                Logout
+              </button>
+              <div className="flex items-center justify-between px-4 py-2 border-t border-gray-200">
+                <span className="text-sm text-gray-700">हिन्दी</span>
+                <button className="px-4 py-1 text-sm font-medium text-white bg-blue-500 rounded hover:bg-blue-600">
+                  Change
+                </button>
               </div>
             </div>
-          )}
+          </div>
         </div>
 
         {/* <div className="flex items-center space-x-1 cursor-pointer">

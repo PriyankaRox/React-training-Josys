@@ -1,60 +1,175 @@
 import React from 'react';
 
+import axios from 'axios';
 import {
   SubmitHandler,
   useForm,
 } from 'react-hook-form';
 
+const BASE_URL: string | undefined = process.env.REACT_APP_API_URL;
+
+if (!BASE_URL) {
+  throw new Error("API URL is not defined in the environment variables.");
+}
+
+interface RegisterProps {
+  onRegisterSuccess: () => void;
+}
+
 type FormValues = {
-  name: string;
+  username: string;
   email: string;
   password: string;
-  confirmPassword: string;
+  confirm_password: string;
+  first_name: string;
+  last_name: string;
+  phone: string;
+  address: string;
 };
 
-const Registration: React.FC = () => {
+const Registration: React.FC<RegisterProps> = ({ onRegisterSuccess }) => {
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm<FormValues>();
-
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log("Registration Data:", data);
+  const onSubmit: SubmitHandler<FormValues> = async (data) => {
+    console.log("Registering user with data:", data);
+    try {
+      await axios.post("http://localhost:5000/register", data);
+      onRegisterSuccess();
+    } catch (err) {
+      console.error("Error during registration:", err);
+      console.log(`Making POST request to: ${BASE_URL}/register`);
+    }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="max-w-md w-full bg-white p-8 shadow-md rounded-lg">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="max-w-md w-full bg-white p-8 shadow-lg rounded-md">
         <h2 className="text-2xl font-bold text-gray-800 text-center mb-6">
           Register
         </h2>
         <form onSubmit={handleSubmit(onSubmit)}>
-          {/* Name Field */}
+          {/* Username */}
           <div className="mb-4">
             <label
               className="block text-gray-700 font-medium mb-2"
-              htmlFor="name"
+              htmlFor="username"
             >
-              Name
+              Username
             </label>
             <input
-              id="name"
+              id="username"
               type="text"
               className={`w-full p-2 border rounded-lg ${
-                errors.name ? "border-red-500" : "border-gray-300"
+                errors.username ? "border-red-500" : "border-gray-300"
               }`}
-              {...register("name", { required: "Name is required" })}
+              {...register("username", { required: "Username is required" })}
             />
-            {errors.name && (
+            {errors.username && (
               <span className="text-red-500 text-sm">
-                {errors.name.message}
+                {errors.username.message}
               </span>
             )}
           </div>
 
-          {/* Email Field */}
+          {/* First Name */}
+          <div className="mb-4">
+            <label
+              className="block text-gray-700 font-medium mb-2"
+              htmlFor="first_name"
+            >
+              First Name
+            </label>
+            <input
+              id="first_name"
+              type="text"
+              className={`w-full p-2 border rounded-lg ${
+                errors.first_name ? "border-red-500" : "border-gray-300"
+              }`}
+              {...register("first_name", {
+                required: "First name is required",
+              })}
+            />
+            {errors.first_name && (
+              <span className="text-red-500 text-sm">
+                {errors.first_name.message}
+              </span>
+            )}
+          </div>
+
+          {/* Last Name */}
+          <div className="mb-4">
+            <label
+              className="block text-gray-700 font-medium mb-2"
+              htmlFor="last_name"
+            >
+              Last Name
+            </label>
+            <input
+              id="last_name"
+              type="text"
+              className={`w-full p-2 border rounded-lg ${
+                errors.last_name ? "border-red-500" : "border-gray-300"
+              }`}
+              {...register("last_name", { required: "Last name is required" })}
+            />
+            {errors.last_name && (
+              <span className="text-red-500 text-sm">
+                {errors.last_name.message}
+              </span>
+            )}
+          </div>
+
+          {/* Phone */}
+          <div className="mb-4">
+            <label
+              className="block text-gray-700 font-medium mb-2"
+              htmlFor="phone"
+            >
+              Phone
+            </label>
+            <input
+              id="phone"
+              type="text"
+              className={`w-full p-2 border rounded-lg ${
+                errors.phone ? "border-red-500" : "border-gray-300"
+              }`}
+              {...register("phone", { required: "Phone number is required" })}
+            />
+            {errors.phone && (
+              <span className="text-red-500 text-sm">
+                {errors.phone.message}
+              </span>
+            )}
+          </div>
+
+          {/* Address */}
+          <div className="mb-4">
+            <label
+              className="block text-gray-700 font-medium mb-2"
+              htmlFor="address"
+            >
+              Address
+            </label>
+            <input
+              id="address"
+              type="text"
+              className={`w-full p-2 border rounded-lg ${
+                errors.address ? "border-red-500" : "border-gray-300"
+              }`}
+              {...register("address", { required: "Address is required" })}
+            />
+            {errors.address && (
+              <span className="text-red-500 text-sm">
+                {errors.address.message}
+              </span>
+            )}
+          </div>
+
+          {/* Email */}
           <div className="mb-4">
             <label
               className="block text-gray-700 font-medium mb-2"
@@ -83,7 +198,7 @@ const Registration: React.FC = () => {
             )}
           </div>
 
-          {/* Password Field */}
+          {/* Password */}
           <div className="mb-4">
             <label
               className="block text-gray-700 font-medium mb-2"
@@ -112,29 +227,29 @@ const Registration: React.FC = () => {
             )}
           </div>
 
-          {/* Confirm Password Field */}
+          {/* Confirm Password */}
           <div className="mb-4">
             <label
               className="block text-gray-700 font-medium mb-2"
-              htmlFor="confirmPassword"
+              htmlFor="confirm_password"
             >
               Confirm Password
             </label>
             <input
-              id="confirmPassword"
+              id="confirm_password"
               type="password"
               className={`w-full p-2 border rounded-lg ${
-                errors.confirmPassword ? "border-red-500" : "border-gray-300"
+                errors.confirm_password ? "border-red-500" : "border-gray-300"
               }`}
-              {...register("confirmPassword", {
+              {...register("confirm_password", {
                 required: "Please confirm your password",
                 validate: (value) =>
                   value === watch("password") || "Passwords do not match",
               })}
             />
-            {errors.confirmPassword && (
+            {errors.confirm_password && (
               <span className="text-red-500 text-sm">
-                {errors.confirmPassword.message}
+                {errors.confirm_password.message}
               </span>
             )}
           </div>
@@ -142,7 +257,7 @@ const Registration: React.FC = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300"
+            className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300"
           >
             Register
           </button>

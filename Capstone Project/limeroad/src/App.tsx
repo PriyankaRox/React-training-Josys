@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Dashboard from './pages/Admin/Dashboard';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
       <Header />
@@ -15,6 +15,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,229 @@
+{
+  "register": [
+    {
+      "username": "admin",
+      "first_name": "Pinks",
+      "last_name": "Rocks",
+      "phone": "9738215789",
+      "address": "Tolnaka",
+      "email": "admin@gmail.com",
+      "password": "admin123",
+      "confirm_password": "admin123",
+      "id": 1
+    }
+  ],
+  "login": [
+    {
+      "username": "admin",
+      "password": "admin123",
+      "id": 1
+    },
+    {
+      "username": "admin",
+      "password": "admin123",
+      "id": 2
+    }
+  ],
+  "categories": [
+    {
+      "category_id": 1,
+      "category_name": "Men"
+    },
+    {
+      "category_id": 2,
+      "category_name": "Women"
+    },
+    {
+      "category_id": 3,
+      "category_name": "Kids"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "category_id": 1,
+      "category_name": "Men",
+      "subcategory": "Vests",
+      "product_name": "Blue pure cotton vest",
+      "image": "https://n-img3.junaroad.com/uiproducts/20876680/zoom_1-1706016144.jpg",
+      "rating": 4.5,
+      "size": 40,
+      "quantity": 50,
+      "mrp": 1200,
+      "price": 999,
+      "discount": 17,
+      "description": "Elegant cotton kurta for men.",
+      "product_details": "print and pattern : graphic color : blue material : Pure Cotton no. of pcs : 1 brand name : Organic Chics country of origin : india neck type : Round neck exclusive to limeroad : no vests sleeve type : Sleeveless Product Code :20876680",
+      "seller_details": "XYZ Fashion Store"
+    },
+    {
+      "id": 2,
+      "category_id": 1,
+      "category_name": "Men",
+      "subcategory": "Pant",
+      "product_name": "Men's Formal Trousers",
+      "image": "https://n-img0.junaroad.com/uiproducts/19285420/zoom_0-1675177014.jpg",
+      "rating": 4.2,
+      "size": 34,
+      "quantity": 30,
+      "mrp": 2000,
+      "price": 1599,
+      "discount": 20,
+      "description": "Slim-fit formal trousers.",
+      "product_details": "Material: Polyester, Color: Black",
+      "seller_details": "Urban Fashion Co."
+    },
+    {
+      "id": 3,
+      "category_id": 2,
+      "category_name": "Women",
+      "subcategory": "Top",
+      "product_name": "Women's Casual Top",
+      "image": "https://n-img1.junaroad.com/uiproducts/19866975/zoom_0-1684771177.jpg",
+      "rating": 4.8,
+      "size": 36,
+      "quantity": 60,
+      "mrp": 999,
+      "price": 749,
+      "discount": 25,
+      "description": "Stylish casual top for women.",
+      "product_details": "Material: Rayon, Color: Red",
+      "seller_details": "FashionHub"
+    },
+    {
+      "id": 4,
+      "category_id": 2,
+      "category_name": "Women",
+      "subcategory": "Kurta",
+      "product_name": "Women's Designer Kurta",
+      "image": "https://n-img0.junaroad.com/uiproducts/19895996/zoom_0-1685003987.jpg",
+      "rating": 4.6,
+      "size": 38,
+      "quantity": 40,
+      "mrp": 2500,
+      "price": 1999,
+      "discount": 20,
+      "description": "Designer kurta with embroidery.",
+      "product_details": "Material: Georgette, Color: Green",
+      "seller_details": "EthnicWear Store"
+    },
+    {
+      "id": 5,
+      "category_id": 3,
+      "category_name": "Kids",
+      "subcategory": "Top",
+      "product_name": "Kids' Printed T-shirt",
+      "image": "https://n-img0.junaroad.com/uiproducts/19452608/zoom_0-1678965162.jpg",
+      "rating": 4.3,
+      "size": 28,
+      "quantity": 80,
+      "mrp": 599,
+      "price": 499,
+      "discount": 17,
+      "description": "Printed T-shirt for kids.",
+      "product_details": "Material: Cotton, Color: Yellow",
+      "seller_details": "Little Stars"
+    },
+    {
+      "id": 6,
+      "category_id": 3,
+      "category_name": "Kids",
+      "subcategory": "Pant",
+      "product_name": "Kids' Denim Jeans",
+      "image": "https://n-img0.junaroad.com/uiproducts/21073895/zoom_0-1714541203.jpg",
+      "rating": 4.4,
+      "size": 30,
+      "quantity": 70,
+      "mrp": 999,
+      "price": 849,
+      "discount": 15,
+      "description": "Comfortable denim jeans for kids.",
+      "product_details": "Material: Denim, Color: Blue",
+      "seller_details": "Trendy Kids Wear"
+    },
+    {
+      "id": 7,
+      "category_id": 1,
+      "category_name": "Men",
+      "subcategory": "Kurta",
+      "product_name": "Men's Ethnic Kurta",
+      "image": "https://n-img0.junaroad.com/uiproducts/19187924/zoom_0-1688488088.jpg",
+      "rating": 4.7,
+      "size": 42,
+      "quantity": 45,
+      "mrp": 1500,
+      "price": 1250,
+      "discount": 17,
+      "description": "Perfect for festive occasions.",
+      "product_details": "Material: Silk, Color: White",
+      "seller_details": "Ethnic King"
+    },
+    {
+      "id": 8,
+      "category_id": 2,
+      "category_name": "Women",
+      "subcategory": "Pant",
+      "product_name": "Women's Formal Pants",
+      "image": "https://n-img0.junaroad.com/uiproducts/21055493/zoom_0-1710228879.jpg",
+      "rating": 4.9,
+      "size": 32,
+      "quantity": 20,
+      "mrp": 1200,
+      "price": 999,
+      "discount": 17,
+      "description": "Comfortable and stylish formal pants.",
+      "product_details": "Material: Rayon, Color: White",
+      "seller_details": "Modern Fashion"
+    },
+    {
+      "id": 9,
+      "category_id": 1,
+      "category_name": "Men",
+      "subcategory": "Pant",
+      "product_name": "Men's Casual Chinos",
+      "image": "https://n-img0.junaroad.com/uiproducts/20536631/zoom_0-1700833321.jpg",
+      "rating": 4.1,
+      "size": 34,
+      "quantity": 25,
+      "mrp": 1600,
+      "price": 1399,
+      "discount": 13,
+      "description": "Relaxed-fit casual chinos.",
+      "product_details": "Material: Cotton, Color: Khaki",
+      "seller_details": "StyleStreet"
+    },
+    {
+      "id": 10,
+      "category_id": 3,
+      "category_name": "Kids",
+      "subcategory": "Kurta",
+      "product_name": "Kids' Festive Kurta",
+      "image": "https://n-img0.junaroad.com/uiproducts/21462652/zoom_0-1722479327.jpg",
+      "rating": 4.2,
+      "size": 26,
+      "quantity": 50,
+      "mrp": 1200,
+      "price": 999,
+      "discount": 17,
+      "description": "Adorable kurta for festivals.",
+      "product_details": "Material: Cotton, Color: Pink",
+      "seller_details": "Little Stars"
+    },
+    {
+      "id": 11,
+      "category_id": 2,
+      "category_name": "Women",
+      "product_name": "Kurta",
+      "rating": 4.5,
+      "image": "https://n-img1.junaroad.com/uiproducts/21016172/zoom_0-1711777534.jpg",
+      "size": "M",
+      "quantity": 5,
+      "mrp": 899,
+      "price": 789,
+      "discount": "8",
+      "description": "white kurta",
+      "product_details": "elegant",
+      "seller_details": "XYZ"
+    }
+  ]
+}
