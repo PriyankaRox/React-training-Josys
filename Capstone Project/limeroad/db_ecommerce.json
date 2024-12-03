@@ -1,6 +1,7 @@
 {
   "register": [
     {
+      "role":"admin",
       "username": "admin",
       "first_name": "Pinks",
       "last_name": "Rocks",
@@ -9,38 +10,60 @@
       "email": "admin@gmail.com",
       "password": "admin123",
       "confirm_password": "admin123",
-      "id": 1
+      "id": "1"
+    },
+    {
+      "role":"user",
+      "id": "d438",
+      "username": "Sachin",
+      "first_name": "Sachin",
+      "last_name": "Naik",
+      "phone": "9898989898",
+      "address": "Naikwad",
+      "email": "sachin@gmail.com",
+      "password": "sachin123",
+      "confirm_password": "sachin123"
     }
   ],
   "login": [
     {
+      "role":"admin",
       "username": "admin",
       "password": "admin123",
-      "id": 1
+      "id": "1"
     },
     {
       "username": "admin",
       "password": "admin123",
-      "id": 2
+      "id": "2"
+    },
+    {
+      "role":"user",
+      "username": "Sachin",
+      "password": "sachin123",
+      "id": "3"
     }
   ],
   "categories": [
     {
       "category_id": 1,
-      "category_name": "Men"
+      "category_name": "Men",
+      "id": "63d6"
     },
     {
       "category_id": 2,
-      "category_name": "Women"
+      "category_name": "Women",
+      "id": "16d4"
     },
     {
       "category_id": 3,
-      "category_name": "Kids"
+      "category_name": "Kids",
+      "id": "53ea"
     }
   ],
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "category_id": 1,
       "category_name": "Men",
       "subcategory": "Vests",
@@ -57,7 +80,7 @@
       "seller_details": "XYZ Fashion Store"
     },
     {
-      "id": 2,
+      "id": "2",
       "category_id": 1,
       "category_name": "Men",
       "subcategory": "Pant",
@@ -74,7 +97,7 @@
       "seller_details": "Urban Fashion Co."
     },
     {
-      "id": 3,
+      "id": "3",
       "category_id": 2,
       "category_name": "Women",
       "subcategory": "Top",
@@ -91,7 +114,7 @@
       "seller_details": "FashionHub"
     },
     {
-      "id": 4,
+      "id": "4",
       "category_id": 2,
       "category_name": "Women",
       "subcategory": "Kurta",
@@ -108,7 +131,7 @@
       "seller_details": "EthnicWear Store"
     },
     {
-      "id": 5,
+      "id": "5",
       "category_id": 3,
       "category_name": "Kids",
       "subcategory": "Top",
@@ -125,7 +148,7 @@
       "seller_details": "Little Stars"
     },
     {
-      "id": 6,
+      "id": "6",
       "category_id": 3,
       "category_name": "Kids",
       "subcategory": "Pant",
@@ -142,12 +165,12 @@
       "seller_details": "Trendy Kids Wear"
     },
     {
-      "id": 7,
+      "id": "7",
       "category_id": 1,
       "category_name": "Men",
       "subcategory": "Kurta",
       "product_name": "Men's Ethnic Kurta",
-      "image": "https://n-img0.junaroad.com/uiproducts/19187924/zoom_0-1688488088.jpg",
+      "image": "https://n-img4.junaroad.com/uiproducts/21660558/zoom_0-1732792622.jpg",
       "rating": 4.7,
       "size": 42,
       "quantity": 45,
@@ -159,7 +182,7 @@
       "seller_details": "Ethnic King"
     },
     {
-      "id": 8,
+      "id": "8",
       "category_id": 2,
       "category_name": "Women",
       "subcategory": "Pant",
@@ -176,7 +199,7 @@
       "seller_details": "Modern Fashion"
     },
     {
-      "id": 9,
+      "id": "9",
       "category_id": 1,
       "category_name": "Men",
       "subcategory": "Pant",
@@ -193,7 +216,7 @@
       "seller_details": "StyleStreet"
     },
     {
-      "id": 10,
+      "id": "10",
       "category_id": 3,
       "category_name": "Kids",
       "subcategory": "Kurta",
@@ -210,7 +233,7 @@
       "seller_details": "Little Stars"
     },
     {
-      "id": 11,
+      "id": "11",
       "category_id": 2,
       "category_name": "Women",
       "product_name": "Kurta",

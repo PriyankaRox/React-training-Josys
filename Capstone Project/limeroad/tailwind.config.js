@@ -21,7 +21,10 @@ module.exports = {
           950: "#172554",
         }, // Example custom color
       },
+
       fontFamily: {
+        logo: ["Georgia"],
+        dashboardLabel: ["fantasy"],
         body: [
           "Inter",
           "ui-sans-serif",

@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
           <h3 className="text-lg font-semibold text-gray-800 mb-3">About Us</h3>
           <ul className="text-sm text-gray-600 space-y-2">
             <li>
-              <a href="/story" className="hover:text-gray-800">
+              <a href="/about" className="hover:text-gray-800">
                 Our Story
               </a>
             </li>

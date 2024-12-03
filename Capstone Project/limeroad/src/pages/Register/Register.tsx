@@ -1,10 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import axios from 'axios';
-import {
-  SubmitHandler,
-  useForm,
-} from 'react-hook-form';
+import axios from "axios";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 const BASE_URL: string | undefined = process.env.REACT_APP_API_URL;
 
@@ -34,24 +32,32 @@ const Registration: React.FC<RegisterProps> = ({ onRegisterSuccess }) => {
     watch,
     formState: { errors },
   } = useForm<FormValues>();
+  const navigate = useNavigate();
+
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     console.log("Registering user with data:", data);
     try {
       await axios.post("http://localhost:5000/register", data);
       onRegisterSuccess();
+      navigate("/login");
     } catch (err) {
       console.error("Error during registration:", err);
       console.log(`Making POST request to: ${BASE_URL}/register`);
     }
   };
 
+  const handleLoginClick = (e: React.MouseEvent) => {
+    e.preventDefault(); // Prevent form submission when clicking on Register
+    navigate("/login"); // Navigate to the register page
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="max-w-md w-full bg-white p-8 shadow-lg rounded-md">
-        <h2 className="text-2xl font-bold text-gray-800 text-center mb-6">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 bg-[url('https://img.freepik.com/premium-vector/background-with-colorful-shopping-bags-vector-illustration-sale-discount-concept_653240-59.jpg')] bg-cover bg-center h-full w-full">
+      <div className="max-w-md w-full bg-white p-4 shadow-lg rounded-md">
+        <h2 className="text-2xl font-bold text-gray-800 text-center mb-3">
           Register
         </h2>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
           {/* Username */}
           <div className="mb-4">
             <label
@@ -74,55 +80,57 @@ const Registration: React.FC<RegisterProps> = ({ onRegisterSuccess }) => {
               </span>
             )}
           </div>
+          <div>
+            {/* First Name */}
+            <div className="mb-4">
+              <label
+                className="block text-gray-700 font-medium mb-2"
+                htmlFor="first_name"
+              >
+                First Name
+              </label>
+              <input
+                id="first_name"
+                type="text"
+                className={`w-full p-2 border rounded-lg ${
+                  errors.first_name ? "border-red-500" : "border-gray-300"
+                }`}
+                {...register("first_name", {
+                  required: "First name is required",
+                })}
+              />
+              {errors.first_name && (
+                <span className="text-red-500 text-sm">
+                  {errors.first_name.message}
+                </span>
+              )}
+            </div>
 
-          {/* First Name */}
-          <div className="mb-4">
-            <label
-              className="block text-gray-700 font-medium mb-2"
-              htmlFor="first_name"
-            >
-              First Name
-            </label>
-            <input
-              id="first_name"
-              type="text"
-              className={`w-full p-2 border rounded-lg ${
-                errors.first_name ? "border-red-500" : "border-gray-300"
-              }`}
-              {...register("first_name", {
-                required: "First name is required",
-              })}
-            />
-            {errors.first_name && (
-              <span className="text-red-500 text-sm">
-                {errors.first_name.message}
-              </span>
-            )}
+            {/* Last Name */}
+            <div className="mb-4">
+              <label
+                className="block text-gray-700 font-medium mb-2"
+                htmlFor="last_name"
+              >
+                Last Name
+              </label>
+              <input
+                id="last_name"
+                type="text"
+                className={`w-full p-2 border rounded-lg ${
+                  errors.last_name ? "border-red-500" : "border-gray-300"
+                }`}
+                {...register("last_name", {
+                  required: "Last name is required",
+                })}
+              />
+              {errors.last_name && (
+                <span className="text-red-500 text-sm">
+                  {errors.last_name.message}
+                </span>
+              )}
+            </div>
           </div>
-
-          {/* Last Name */}
-          <div className="mb-4">
-            <label
-              className="block text-gray-700 font-medium mb-2"
-              htmlFor="last_name"
-            >
-              Last Name
-            </label>
-            <input
-              id="last_name"
-              type="text"
-              className={`w-full p-2 border rounded-lg ${
-                errors.last_name ? "border-red-500" : "border-gray-300"
-              }`}
-              {...register("last_name", { required: "Last name is required" })}
-            />
-            {errors.last_name && (
-              <span className="text-red-500 text-sm">
-                {errors.last_name.message}
-              </span>
-            )}
-          </div>
-
           {/* Phone */}
           <div className="mb-4">
             <label
@@ -261,6 +269,15 @@ const Registration: React.FC<RegisterProps> = ({ onRegisterSuccess }) => {
           >
             Register
           </button>
+          <p className="mt-4 text-sm text-gray-600">
+            Existing User?{" "}
+            <button
+              className="text-blue-500 underline"
+              onClick={handleLoginClick}
+            >
+              Login
+            </button>
+          </p>
         </form>
       </div>
     </div>
