@@ -1,4 +1,4 @@
-import "./index.css";
+import './index.css';
 
 import React, {
   lazy,
@@ -7,26 +7,26 @@ import React, {
   Suspense,
   useEffect,
   useState,
-} from "react";
+} from 'react';
 
-import ReactDOM from "react-dom/client";
+import ReactDOM from 'react-dom/client';
 import {
   BrowserRouter as Router,
   Link,
   Navigate,
   Route,
   Routes,
-} from "react-router-dom";
+} from 'react-router-dom';
 
-import SearchResults from "./components/SearchResults";
-import { CartProvider } from "./context/CartContext";
-import { withRouter } from "./HOC/withRouter";
-import Cart from "./pages/Cart/Cart";
-import ProtectedRoute from "./pages/Login/ProtectedRoute";
-import Order from "./pages/Orders/Order";
-import OrderDetails from "./pages/Orders/OrderDetails";
-import ProductDetails from "./pages/Products/ProductDetails";
-import reportWebVitals from "./reportWebVitals";
+import SearchResults from './components/SearchResults';
+import { CartProvider } from './context/CartContext';
+import { withRouter } from './HOC/withRouter';
+import Cart from './pages/Cart/Cart';
+import ProtectedRoute from './pages/Login/ProtectedRoute';
+import Order from './pages/Orders/Order';
+import OrderDetails from './pages/Orders/OrderDetails';
+import ProductDetails from './pages/Products/ProductDetails';
+import reportWebVitals from './reportWebVitals';
 
 //error occurs inside the Suspense component, it might crash the application. Adding an Error Boundary for better error handling
 interface ErrorBoundaryProps {
@@ -94,12 +94,12 @@ const MainApp: React.FC = () => {
           {isLoggedIn ? (
             <>
               <nav>
-                <button
+                {/* <button
                   onClick={handleLogout}
                   className="bg-red-500 px-4 py-2 rounded hover:bg-red-600"
                 >
                   Logout
-                </button>
+                </button> */}
                 <Navigate to="/" />
                 <div>
                   <Link to="/"></Link>
@@ -107,6 +107,7 @@ const MainApp: React.FC = () => {
                   <Link to="/about"></Link>
                   <Link to="/login"></Link>
                   <Link to="/register"></Link>
+                  <Link to="/product-display"></Link>
                   {/* User Dashboard component */}
                   <Suspense fallback={<Loader />}>
                     <Routes>
@@ -162,7 +163,7 @@ const MainApp: React.FC = () => {
               {!isRegistering ? (
                 <div>
                   <Login onLoginSuccess={handleLoginSuccess} />
-                  <p className="mt-4 text-sm text-gray-600">
+                  <p className=" text-sm text-gray-600 ml-[620px] mt-[-194px] relative z-[1]">
                     New here?{" "}
                     <button
                       className="text-blue-500 underline"
@@ -177,7 +178,7 @@ const MainApp: React.FC = () => {
               ) : (
                 <div>
                   <Register onRegisterSuccess={handleRegisterSuccess} />
-                  <p className="mt-4 text-sm text-gray-600">
+                  <p className="text-sm text-gray-600 ml-[588px] mt-[-70px] relative z-[1]">
                     Already have an account ?{" "}
                     <button
                       className="text-blue-500 underline"

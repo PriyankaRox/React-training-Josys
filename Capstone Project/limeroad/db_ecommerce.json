@@ -1,7 +1,7 @@
 {
   "register": [
     {
-      "role":"admin",
+      "role": "admin",
       "username": "admin",
       "first_name": "Pinks",
       "last_name": "Rocks",
@@ -13,7 +13,7 @@
       "id": "1"
     },
     {
-      "role":"user",
+      "role": "user",
       "id": "d438",
       "username": "Sachin",
       "first_name": "Sachin",
@@ -23,25 +23,63 @@
       "email": "sachin@gmail.com",
       "password": "sachin123",
       "confirm_password": "sachin123"
+    },
+    {
+      "id": "6ed6",
+      "role": "user",
+      "username": "aloy",
+      "first_name": "Aloy",
+      "last_name": "Sane",
+      "phone": "7878676565",
+      "address": "5th street 1st main hudie",
+      "email": "aloy@gmail.com",
+      "password": "$2a$10$EVy/hbADLhO.Dt.tRXoLeO86XhzOyJOZDA4/QX2tjF0nv1uu6LLKG"
+    },
+    {
+      "id": "9903",
+      "role": "user",
+      "username": "Suman",
+      "first_name": "Suman",
+      "last_name": "Geet",
+      "phone": "6767678767",
+      "address": "5th street 1st main hudie",
+      "email": "suman@gmail.com",
+      "password": "$2a$10$REag4AYVSvThcKfzZFflvO4va/N3av8.MApRwPkaIkbdv/qbEOZWy"
+    },
+    {
+      "id": "602f",
+      "role": "user",
+      "username": "Maxi",
+      "first_name": "Maxi",
+      "last_name": "Dope",
+      "phone": "9887667676",
+      "address": "5th street 1st main hudie",
+      "email": "maxi@gmail.com",
+      "password": "$2a$10$ORDCfogr3hTelqH7qwVmoO9.uo/JRrCZ0FIHc.2dPa55RElNUU7Ti"
     }
   ],
   "login": [
     {
-      "role":"admin",
+      "role": "admin",
       "username": "admin",
       "password": "admin123",
       "id": "1"
     },
     {
-      "username": "admin",
-      "password": "admin123",
-      "id": "2"
-    },
-    {
-      "role":"user",
+      "role": "user",
       "username": "Sachin",
       "password": "sachin123",
       "id": "3"
+    },
+    {
+      "id": "a2e0",
+      "username": "Maxi",
+      "password": "Maxi@123"
+    },
+    {
+      "id": "9efe",
+      "username": "admin",
+      "password": "admin123"
     }
   ],
   "categories": [
@@ -247,6 +285,86 @@
       "description": "white kurta",
       "product_details": "elegant",
       "seller_details": "XYZ"
+    },
+    {
+      "id": "12",
+      "category_id": 3,
+      "category_name": "Kids",
+      "product_name": "Sport shoe",
+      "rating": 5,
+      "image": "https://n-img0.junaroad.com/uiproducts/21235615/zoom_0-1715327565.jpg",
+      "size": "S",
+      "quantity": 7,
+      "mrp": 699,
+      "price": 499,
+      "discount": "29",
+      "description": "Pink fabric sport shoe brand KATS",
+      "product_details": "color : Pink material : Fabric brand name : KATS country of origin : india print & pattern : Solids color family : pink exclusive to limeroad : no",
+      "seller_details": "KESHAV INDIA FOOTWEAR PRIVATE LIMITED PLOT NO. 24/18/2/2,, PART-1, M.I.E., BAHADURGARH, Jhajjar, PIN-124507, PLOT NO. 24/18/2/2,, PART-1, M.I.E., BAHADURGARH, Jhajjar, PIN-124507"
+    },
+    {
+      "id": "13",
+      "category_id": 3,
+      "category_name": "Kids",
+      "product_name": "Winter Wear",
+      "rating": 4,
+      "image": "https://n-img0.junaroad.com/uiproducts/21492359/zoom_1-1730116727.jpg",
+      "size": "S",
+      "quantity": 2,
+      "mrp": 699,
+      "price": 499,
+      "discount": "29",
+      "description": "kids winter wear full length twin set brand Kidistan by Vmart",
+      "product_details": "country of origin : India color : green Product Code :21492359",
+      "seller_details": "V-Mart Retail Limited Address :V-Mart Retail Limited, Palwal Warehouse, Dungarpur and Jaindapur,, District Palwal, Industrial Estate, Haryana-121102"
+    },
+    {
+      "id": "14",
+      "category_id": 3,
+      "category_name": "Kids",
+      "product_name": "Watch",
+      "rating": 4,
+      "image": "https://n-img4.junaroad.com/uiproducts/19440305/zoom_0-1677747425.jpg",
+      "size": "S",
+      "quantity": 2,
+      "mrp": 699,
+      "price": 499,
+      "discount": "29",
+      "description": "Pink leatherette watch & bracelet combo brand niyatinx",
+      "product_details": "Purchase looks for children online in India. Shop from a stylish scope of advanced, simple, LCD, sports and different looks for young ladies and young men from pink . Buy the latest collection for different occasions of charming watches for your girl in pink colours.Cherry on the top get watches in varied prints are available to make watch look more attractive.",
+      "seller_details": "Niyati Fab Address:411 Tapi arced near abrahma char rasta Mota varachha Surat 394101, 411 Tapi arced near abrahma char rasta Mota varachha Surat 394101"
+    },
+    {
+      "id": "15",
+      "category_id": 3,
+      "category_name": "Kids",
+      "product_name": "Dungaree",
+      "rating": 4.9,
+      "image": "https://n-img1.junaroad.com/uiproducts/20009436/zoom_0-1687793815.jpg",
+      "size": "L",
+      "quantity": 2,
+      "mrp": 599,
+      "price": 300,
+      "discount": "12",
+      "description": "Maroon solid adjustable shoulder straps dungaree brand AJEO Fashion",
+      "product_details": "Update your little girl’s wardrobe with lively twin sets and jump suit designs made of cotton blend fabrics with a comfort fit that can be worn on a daily basis.Dress up your little princess in twin sets and jump suits in dungarees with magnificent embellished designs to make her childhood more fun and fashionable.",
+      "seller_details": "AJEO Fashion Address :MM D1/559, SECTOR D1, L.D.A COLONY KANPUR LUCKNOW 226012 City:Lucknow"
+    },
+    {
+      "id": "16",
+      "category_id": 3,
+      "category_name": "Kids",
+      "product_name": "Sweater",
+      "rating": 4.9,
+      "image": "https://n-img0.junaroad.com/uiproducts/21620211/zoom_1-1729879289.jpg",
+      "size": "L",
+      "quantity": 2,
+      "mrp": 1499,
+      "price": 879,
+      "discount": "41",
+      "description": "Girls self design round neck sweater",
+      "product_details": "Get sweaters and cardigans from MINI KLUB at your favourite online portal, LimeRoad. Grab your lovely sweaters and cardigans at ₹879 price range.You can also profit 41% discounts.",
+      "seller_details": "MINIKLUB retail private limited Address:Sy.No.6, M/s De Royale Ventures, Anugondanahalli Village, Hobli, Hosakote Taluk,, Bengaluru Rural, Karnataka, 560067"
     }
   ]
 }

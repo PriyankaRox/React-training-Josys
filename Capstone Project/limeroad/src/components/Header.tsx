@@ -1,6 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, {
+  useEffect,
+  useState,
+} from 'react';
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+import { removeToken } from 'src/utils/auth';
 
 const Header: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
@@ -18,7 +22,7 @@ const Header: React.FC = () => {
   const handleLogout = () => {
     setIsLoggedIn(false);
     localStorage.removeItem("user");
-    console.log("logout", isLoggedIn, localStorage.removeItem("user"));
+    removeToken();
     navigate("/login");
   };
 

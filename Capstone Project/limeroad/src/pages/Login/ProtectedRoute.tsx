@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, {
+  useEffect,
+  useState,
+} from 'react';
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 interface ProtectedRouteProps {
   returnUrl: string;
@@ -36,7 +39,7 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = (
   useEffect(() => {
     // alert(props.returnUrl);
     checkUserToken();
-  }, []);
+  }, [isLoggedIn]);
 
   return <React.Fragment>{isLoggedIn ? props.children : null}</React.Fragment>;
 };
